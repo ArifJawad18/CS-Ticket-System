@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import "./App.css";
+import Banner from "./components/Customers/Banner/banner";
 import Customers from "./components/Customers/Customers";
+import Footer from "./components/Footer/footer";
+
 
 const fetchCustomers = async () => {
   const res = await fetch("/customers.json");
@@ -11,6 +14,7 @@ function App() {
 
   return (
     <div>
+      {/* Nabar start */}
       <div className="navbar bg-base-100 shadow-md border-b border-base-200 px-4">
         <div className="flex-1 gap-2">
           <a className="text-xl font-bold tracking-tight cursor-pointer">
@@ -42,11 +46,16 @@ function App() {
           </button>
         </div>
       </div>
+
+      <Banner></Banner>
+
       <Suspense
         fallback={<span className="loading loading-ring loading-xs"></span>}
       >
         <Customers customersPromise={customersPromise} />
       </Suspense>
+
+      <Footer></Footer>
     </div>
   );
 }
