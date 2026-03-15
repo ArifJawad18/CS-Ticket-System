@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./components/Customers/Banner/banner";
 import Customers from "./components/Customers/Customers";
@@ -11,7 +11,7 @@ const fetchCustomers = async () => {
 };
 function App() {
   const customersPromise = fetchCustomers();
-
+const [selectedCustomer,setSelectedCustomer] = useState([]);
   return (
     <div>
       {/* Nabar start */}
@@ -52,7 +52,8 @@ function App() {
       <Suspense
         fallback={<span className="loading loading-ring loading-xs"></span>}
       >
-        <Customers customersPromise={customersPromise} />
+        <Customers customersPromise={customersPromise} selectedCustomer={selectedCustomer} setSelectedCustomer={setSelectedCustomer} >
+        </Customers>
       </Suspense>
 
       <Footer></Footer>

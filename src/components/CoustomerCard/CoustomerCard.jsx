@@ -1,16 +1,13 @@
 import { useState } from "react";
 
-
-
-
-
-const CoustomerCard = ({ticket}) => {
-     const [isSelected,setSelected] = useState(false)
+const CoustomerCard = ({ ticket, selectedCustomer, setSelectedCustomer }) => {
+  const [isSelected, setSelected] = useState(false);
   return (
     <div>
       <div
         key={ticket.id}
-        className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm  w-[350px] hover:shadow-md transition-shadow mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        className="bg-white border border-gray-200 rounded-lg p-3 shadow-sm  w-[350px] hover:shadow-md transition-shadow mx-auto grid grid-cols-1 md:grid-cols-2 gap-4"
+      >
         <div className="flex justify-between items-center mb-1">
           <div className="flex items-center gap-1.5 min-w-0">
             <h2 className="text-sm font-semibold text-slate-800 truncate">
@@ -22,9 +19,11 @@ const CoustomerCard = ({ticket}) => {
           </div>
 
           <div className="flex items-center gap-1 shrink-0 ml-1.5">
-            
-            <button onClick={()=>setSelected(true)} className="text-[11px] font-medium text-green-700">
-              {isSelected===true?"In Progress":"Open"}
+            <button
+              onClick={() => setSelected(true)}
+              className="text-[11px] font-medium text-green-700"
+            >
+              {isSelected === true ? "In Progress" : "Open"}
             </button>
           </div>
         </div>
