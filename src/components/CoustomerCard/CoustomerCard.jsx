@@ -18,7 +18,7 @@ const CoustomerCard = ({ ticket, selectedCustomer, setSelectedCustomer }) => {
             </span>
           </div>
 
-          <div className="flex items-center gap-1 shrink-0 ml-1.5">
+          <div className="flex items-center gap-1 shrink-0 ml-10">
             <button
               onClick={() => setSelected(true)}
               className="text-[11px] font-medium text-green-700"
