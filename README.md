@@ -1,16 +1,5 @@
-# React + Vite
+1.What is JSX, and why is it used?
+JSX  is a syntax extension for JavaScript that allows you to write HTML-like markup directly inside your JavaScript files. While it looks like HTML, it is actually a powerful tool that brings the full capabilities of JavaScript to your UI.It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.
+It provides a familiar, visual way to describe what the user interface should look like. Most developers find it much easier to read and write than the complex, nested JavaScript function calls it replaces.Unlike traditional template languages, JSX allows you to embed any valid JavaScript expression (like variables, math, or function calls) directly inside the markup using curly braces 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2.
